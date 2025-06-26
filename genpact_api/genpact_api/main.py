@@ -6,6 +6,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 class CitiesResponse(pydantic.BaseModel):
     cities:typing.List[str] = pydantic.Field('Delhi',description='city name')
+
+
 app = fastapi.FastAPI()
 app.add_middleware(
     CORSMiddleware,
